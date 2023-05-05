@@ -12,13 +12,13 @@ class Image:
     def resize(self):          # это уже МЕТОД всего класса Image
         self.resolution = "1280x720"
 
-    def up_title(self):        # это уже МЕТОД всего класса Image
+    def up_title(self):        
         self.title = self.title.upper()
 
-    def re_extension(self):    # это уже МЕТОД всего класса Image
+    def re_extension(self):    
         self.extension = 'jpg'
 
-    @staticmethod    # декоратор - не привязан к экземпляру класса, работает и как собственный атрибут и как атрибут класса
+    @staticmethod    # декоратор - не привязан к экземпляру класса, работает и как собственный атрибут, и как атрибут класса
     def merge_info_image(first, second):
         return f"{first} {second}"
 
@@ -37,9 +37,9 @@ print(my_first_pic.resolution, my_first_pic.title, my_first_pic.extension)
 # для второй картинки
 print(my_second_pic.resolution, my_second_pic.title, my_second_pic.extension)
 
-my_second_pic.resize()  # меняем этим МЕТОДОМ размер картинки
-my_second_pic.up_title()  # делаем название капсом
-my_second_pic.re_extension()  # меняем расширение
+my_second_pic.resize()  
+my_second_pic.up_title() 
+my_second_pic.re_extension() 
 
 print(my_second_pic.resolution, my_second_pic.title, my_second_pic.extension)
 
